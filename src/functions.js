@@ -13,7 +13,9 @@
 */
 
 //your code here
-
+function uselessFunction (){
+    return null;
+}
 //end your code
 
 var bar = 'not a function';
@@ -29,7 +31,20 @@ var barType = typeof bar;
 * This should return false if any value in the array cannot be doubled.
 */
 
-//your code here
+// your code here
+bar = function( doubleArray){
+    if (Array.isArray(doubleArray)){  // make sure it's an array
+	for (var i=0; i < doubleArray.length; i++){ // loop over every element in array
+	    if (!(typeof doubleArray[i] == 'number')) // return false if not a number
+		return false;
+	    else 
+		doubleArray[i] *= 2;
+	    }
+	 return true;
+	 }
+    else
+	return false;
+}
 
 //end your code
 
@@ -57,7 +72,7 @@ function GitLog(hash, date, message) {
 * and the first " of the commit message.
 *
 * You will covert these into GitLog objects with the following properties:
-*
+*1
 *
 * @param {array.<string>} logArray - an array of Git commit messages of the
 * above
@@ -66,5 +81,45 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
+function parseGit(logArray){
 
+    // http://stackoverflow.com/questions/12744995/finding-the-nth-occurrence-of-a-character-in-a-string-in-javascript
+    function nth_ocurrence(str, needle, nth) {
+	for (var i=0;i<str.length;i++) {
+	    if (str.charAt(i) == needle) {
+		if (!--nth) {
+		    return i;    
+		}
+	    }
+	}
+	return false;
+    } // end nth_occurence function
+
+    var arr = []; // initialize empty array 
+    // create new GitLog object from each line logArray string?  
+    // no, logArray is already broken into an array of strings from each line
+    // var lines = logArray.split('\n');
+
+
+    // loop over each line in logArray 
+    for (var i=0; i < logArray.length; i++)
+	{
+	    var tmpLog = new GitLog();
+	    var tmpStr = logArray[i];
+
+	    // hash is substring from 0..1st space
+	    tmpLog.hash = tmpStr.substring(0,nth_ocurrence(tmpStr,' ',1));
+	    // date is substring from 1st space+1 to 1st "
+	    tmpLog.date = new Date(tmpStr.substring(nth_ocurrence(tmpStr,' ',1) + 1,
+					 nth_ocurrence(tmpStr,'\"',1) - 1));
+	    // message is substring from 1st "+1 to end of string-1
+	    tmpLog.message = tmpStr.substring(nth_ocurrence(tmpStr,'\"',1)+1,
+					       tmpStr.length-1);
+	    
+	    // pack results into arr
+	    arr.push(tmpLog);
+	    
+	    }
+    return arr;
+}
 //end your code

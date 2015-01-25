@@ -10,7 +10,11 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  return { type: 'Goldfish', 
+	   brand: 'Pepperidge Farm',
+	   flavor: 'Cheddar',
+	   count: 2000
+}; //Modify ONLY this line
   //end your code
 }
 
@@ -28,16 +32,48 @@ function returnObjectLiteral() {
 * as either being sent or received. A direction of 0 indicates it is a message
 * the user sent. A direction of 1 indicates it is a message the user received.
 * Behavior for other numbers is undefined.
+
 * getSentMessage({number} n) - returns as a string, the content of the nth most
 * recently sent message. To conserve memory, the object should only keep the
 * last 5 message. n=0 retrieves the most recent n=4 retrieves the least recent
 * of the 5.
+
 * totalSent() - returns an integer indicating the total number of messages sent
 * totalReceived() - returns an integer indicating the total number of messages
 * received
 */
 
 //your code here
+var MessageLog = function(user){
+    this.user = user;  // assuming "user" is a username (string)
+}
+
+// logs a message as sent or received.
+MessageLog.prototype.logMessage =  function (messageText, direction){
+    if (direction == 0){
+	// log messageText as sent
+	"";
+	}
+    else if (direction == 1){
+	// log messageText as received
+	"";
+	}
+}
+
+// return nth most recently sent message (keeps 5 messages)
+MessageLog.prototype.getSentMessage =  function (n){
+}
+
+// returns number of messages sent
+MessageLog.prototype.totalSent =  function (){
+}
+
+
+// returns number of messages received
+MessageLog.prototype.totalReceived =  function (){
+}
+
+
 
 //end your code
 
@@ -47,6 +83,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
+messageLog.prototype.lastReceivedMessage(){
+
+}
 
 //end your code
 
