@@ -90,6 +90,15 @@ MessageLog.prototype.lastReceivedMessage = function(){
     return this.receivedMessages[this.receivedMessages.length-1];
 };
 
+/**
+* Add a method to the MessageLog prototype called systemReceived().
+* This method should return the total number of messages received for all
+* instances of message logs. So if you have logs A and B, A has received
+* 3 messages, B has received 8. systemReceived() should return 11. You
+* may need to do more than simply add a method to make this functionality
+* work.
+*/
+
 //end your code
 
 /**
