@@ -9,13 +9,13 @@
 */
 
 function returnObjectLiteral() {
-  //your code here
-  return { type: 'Goldfish', 
-	   brand: 'Pepperidge Farm',
-	   flavor: 'Cheddar',
-	   count: 2000
-}; //Modify ONLY this line
-  //end your code
+    //your code here
+    return { type: 'Goldfish', 
+	     brand: 'Pepperidge Farm',
+	     flavor: 'Cheddar',
+	     count: 2000
+	   }; //Modify ONLY this line
+    //end your code
 }
 
 /**
@@ -43,36 +43,39 @@ function returnObjectLiteral() {
 * received
 */
 
-//your code here
+// //your code here
 var MessageLog = function(user){
     this.user = user;  // assuming "user" is a username (string)
-}
-
-// logs a message as sent or received.
-MessageLog.prototype.logMessage =  function (messageText, direction){
-    if (direction == 0){
-	// log messageText as sent
-	"";
+    this.sentMessages = []; // empty array
+    this.receivedMessages = []; // empty array
+    this.sentMessageCount = 0;
+    this.logMessage =  function (messageText, direction){
+	if (direction == 0){
+    	    // push messageText as sent (to front of array)
+    	    this.sentMessages.unshift(messageText);
+	    this.sentMessageCount++;  // keep track of count, not array size
+	    // limit array length to 5
+	    if (this.sentMessages.length > 5)
+		 this.sentMessages.splice(5,1) // remove index 4
 	}
-    else if (direction == 1){
-	// log messageText as received
-	"";
+	else if (direction == 1){
+	    // log messageText as received (to front of array)
+	    this.receivedMessages.unshift(messageText);
+	    // if (this.receivedMessages.length > 5)
+	    // 	this.receivedMessages.splice(4,1) // remove index 4
 	}
+    } // end logMessage
+    this.getSentMessage = function(n){
+	return this.sentMessages[n];
+	}
+    this.totalSent = function(){
+	//return this.sentMessages.length;
+	return this.sentMessageCount; // use count, not length, because length is limited to 5
+    }
+    this.totalReceived = function(){
+	return this.receivedMessages.length;
+    }
 }
-
-// return nth most recently sent message (keeps 5 messages)
-MessageLog.prototype.getSentMessage =  function (n){
-}
-
-// returns number of messages sent
-MessageLog.prototype.totalSent =  function (){
-}
-
-
-// returns number of messages received
-MessageLog.prototype.totalReceived =  function (){
-}
-
 
 
 //end your code
@@ -83,9 +86,9 @@ MessageLog.prototype.totalReceived =  function (){
 * received.
 */
 //your code here
-messageLog.prototype.lastReceivedMessage(){
-
-}
+MessageLog.prototype.lastReceivedMessage = function(){
+    return this.receivedMessages[this.receivedMessages.length-1];
+};
 
 //end your code
 
@@ -96,5 +99,8 @@ messageLog.prototype.lastReceivedMessage(){
 */
 
 //your code here
-
+myLog = new MessageLog('BlackHatGuy');
+myLog.logMessage('foo',1);
+myLog.logMessage('bar',1);
+myLog.logMessage('baz',1);
 //end your code
