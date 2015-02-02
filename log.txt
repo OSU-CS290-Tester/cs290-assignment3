@@ -1,1 +1,164 @@
-You log goes in this  file.
+Start: Sun, 25 Jan 2015 06:19:02 -0700 
+End: Sun, 25 Jan 2015 06:30:54 -0700 
+Tasks: added comment for additional systemReceived() function
+
+Start: Sun, 25 Jan 2015 04:54:42 -0700 
+End: Sun, 25 Jan 2015 06:19:02 -0700 
+Tasks: objects.js passes tests
+
+Start: Sun, 25 Jan 2015 04:00:00 -0700 ish
+End: Sun, 25 Jan 2015 04:54:42 -0700 
+Tasks: functions.js passes tests
+
+Start: Sat, 24 Jan 2015 17:00:56 -0700 ish
+End: Sat, 24 Jan 2015 17:59:56 -0700 
+Tasks: variables.js passes tests
+
+
+
+# Part 2 begins here.
+
+
+Start: Sun, 1 Feb 2015 22:17:39 -0700 
+End: Sun, 1 Feb 2015 22:53:04 -0700 
+Tasks: filtering favorites seems to work
+
+Start: 
+End: Sun, 1 Feb 2015 22:17:39 -0700 
+Tasks: Setting up parseGists() to filter search results that are already in favoritesList
+
+Start: Sun, 1 Feb 2015 22:11:32 -0700 
+End: Sun, 1 Feb 2015 22:13:44 -0700 
+Tasks: Deleted the aforementioned files/folders from git's tracking system.
+
+Start: Sun, 1 Feb 2015 22:11:00 -0700 
+End: Sun, 1 Feb 2015 22:11:32 -0700 
+Tasks: reorganized file structure, deleted folders pertaining to the videos.  Would have been better to have gotten this right before I logged everything.
+
+Start: Sun, 1 Feb 2015 00:17:23 -0700 
+End: Sun, 1 Feb 2015 00:46:22 -0700 
+Tasks: Made favorites list show up on window.onload. missed the part where search results that are in th
+
+Start: Sat, 31 Jan 2015 23:28:12 -0700 
+End: Sun, 1 Feb 2015 00:17:23 -0700 
+Tasks: Removed calls to innerText since firefox doesn't have that.
+
+Start: Sat, 31 Jan 2015 22:45:12 -0700 
+End: Sat, 31 Jan 2015 23:28:12 -0700 
+Tasks: Fumbled with CSS a litle
+
+Start: Sat, 31 Jan 2015 22:12:08 -0700 
+End: Sat, 31 Jan 2015 22:45:12 -0700 
+Tasks: Wired up the remove buttons in the favorites list.  Now I want to display both search results and:
+
+Start: 
+End: Sat, 31 Jan 2015 22:12:08 -0700 
+Tasks: Added language names and remove buttons to favorites list.  Need to wire up the buttons, since th:
+
+Start: 
+End: Sat, 31 Jan 2015 21:45:43 -0700 
+Tasks: Favorites list in localStorage works to add values, but can't remove them yet.  Also missing lang:
+
+Start: 
+End: Sat, 31 Jan 2015 17:13:44 -0700 
+Tasks: Reorganized a little
+
+Start: 
+End: Sat, 31 Jan 2015 06:52:20 -0700 
+Tasks: Asynchronous calls seem to work. Made arrays for each request and corresponding result
+
+Start: 
+End: Sat, 31 Jan 2015 05:37:53 -0700 
+Tasks: Sorta works asynchronously, but it's really sloppy
+
+Start: 
+End: Sat, 31 Jan 2015 03:04:07 -0700 
+Tasks: Made pagination work, added some comments for documentation.
+
+Start: 
+End: Sat, 31 Jan 2015 02:11:26 -0700 
+Tasks: Cleared resultList in displayResults() when search is pressed more than once.
+
+Start: 
+End: Sat, 31 Jan 2015 02:07:05 -0700 
+Tasks: cleaned up html some more.  Using ul/li instead of div for everything
+
+Start: 
+End: Sat, 31 Jan 2015 01:37:46 -0700 
+Tasks: removed recursive search for property with no apparent effect.  Working on pages.  https://develo:
+
+Start: 
+End: Sat, 31 Jan 2015 01:23:36 -0700 
+Tasks: Language filtering works.  Stopped trying to recurse over the object to find property keys, and j:
+
+Start: Fri, 30 Jan 2015 06:15:24 -0700 
+End: Fri, 30 Jan 2015 06:26:36 -0700 
+Tasks: Not sure why this if() was there, so I removed it.
+
+Start: Fri, 30 Jan 2015 06:06:07 -0700 
+End: Fri, 30 Jan 2015 06:15:24 -0700 
+Tasks: The html is now showing, but the languages are all showing as 'undefined'.
+
+Start: Fri, 30 Jan 2015 06:01:35 -0700 
+End: Fri, 30 Jan 2015 06:06:07 -0700 
+Tasks: Here's the results of console.log(results).  Let's test line breaks in git commit messages too.
+
+Start: Fri, 30 Jan 2015 04:57:24 -0700 
+End: Fri, 30 Jan 2015 06:01:35 -0700 
+Tasks: Got checkbox values. The new problem is displaying the results of parseGists().  parseGists() mak:
+
+Start: Fri, 30 Jan 2015 04:14:08 -0700 
+End: Fri, 30 Jan 2015 04:57:24 -0700 
+Tasks: Fumbling with getting the checkbox values
+
+Start: Fri, 30 Jan 2015 03:37:59 -0700 
+End: Fri, 30 Jan 2015 04:14:08 -0700 
+Tasks: Cleaned up (messed up?) HTML
+
+Start: Fri, 30 Jan 2015 03:31:02 -0700 
+End: Fri, 30 Jan 2015 03:37:59 -0700 
+Tasks: Added links to items with no description
+
+Start: Thu, 29 Jan 2015 04:14:00 -0700 
+End: Fri, 30 Jan 2015 03:31:02 -0700 
+Tasks: Sorta works.  Not quite parsing correctly.
+
+Start: Thu, 29 Jan 2015 03:57:47 -0700 
+End: Thu, 29 Jan 2015 04:14:00 -0700 
+Tasks: Search button displays zen sayings from github.
+
+Start: Wed, 28 Jan 2015 22:30:44 -0700 
+End: Thu, 29 Jan 2015 03:57:47 -0700 
+Tasks: added gist project.  Search button draws a crude table from an array.
+
+Start: Wed, 28 Jan 2015 22:26:18 -0700 
+End: Wed, 28 Jan 2015 22:30:44 -0700 
+Tasks: fixed unbalanced quotes. displayLocalStorage() works now
+
+Start: Wed, 28 Jan 2015 22:25:52 -0700 
+End: Wed, 28 Jan 2015 22:26:18 -0700 
+Tasks: removed mroe emacs cruft
+
+Start: Wed, 28 Jan 2015 22:24:30 -0700 
+End: Wed, 28 Jan 2015 22:25:52 -0700 
+Tasks: removed some emacs cruft
+
+Start: Wed, 28 Jan 2015 21:59:27 -0700 
+End: Wed, 28 Jan 2015 22:24:30 -0700 
+Tasks: added vid2 stuff.  Doesn't display local storage yet.
+
+Start: 
+End: Wed, 28 Jan 2015 21:59:27 -0700 
+Tasks: fixed typo in video resulting in undefined type error
+
+Start: Wed, 28 Jan 2015 21:44:44 -0700 
+End: Wed, 28 Jan 2015 21:48:09 -0700 
+Tasks: added demo.js with no apparent effect.
+
+Start: Wed, 28 Jan 2015 21:41:03 -0700 
+End: Wed, 28 Jan 2015 21:44:44 -0700 
+Tasks: added bare index.html
+
+Start: Wed, 28 Jan 2015 21:40:00 -0700 
+End: Wed, 28 Jan 2015 21:41:03 -0700 
+Tasks: will copy text from videos and see if they work

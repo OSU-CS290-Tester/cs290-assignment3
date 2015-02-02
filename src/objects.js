@@ -44,6 +44,8 @@ function returnObjectLiteral() {
 */
 
 // //your code here
+
+var globalReceived = 0;
 var MessageLog = function(user){
     this.user = user;  // assuming "user" is a username (string)
     this.sentMessages = []; // empty array
@@ -61,6 +63,7 @@ var MessageLog = function(user){
 	else if (direction == 1){
 	    // log messageText as received (to front of array)
 	    this.receivedMessages.unshift(messageText);
+	    globalReceived++;
 	    // if (this.receivedMessages.length > 5)
 	    // 	this.receivedMessages.splice(4,1) // remove index 4
 	}
@@ -99,6 +102,12 @@ MessageLog.prototype.lastReceivedMessage = function(){
 * work.
 */
 
+
+// MessageLog.systemReceivedMessagesCount = 0; // for system received
+MessageLog.prototype.systemReceived = function(){
+    return globalReceived;
+}
+
 //end your code
 
 /**
@@ -108,8 +117,17 @@ MessageLog.prototype.lastReceivedMessage = function(){
 */
 
 //your code here
-myLog = new MessageLog('BlackHatGuy');
+var myLog = new MessageLog('BlackHatGuy');
 myLog.logMessage('foo',1);
 myLog.logMessage('bar',1);
 myLog.logMessage('baz',1);
 //end your code
+
+// try to access total messages received
+var anotherLog = new MessageLog('trying');
+anotherLog.logMessage('alpha',1);
+
+// 
+console.log(" myLog.systemReceived() " + myLog.systemReceived());
+console.log(" anotherLog.totalReceived() " + anotherLog.systemReceived());
+console.log("MessageLog.prototype.systemReceived()  " + MessageLog.prototype.systemReceived());
